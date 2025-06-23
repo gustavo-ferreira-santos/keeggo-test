@@ -1,0 +1,58 @@
+Funcionalidade: Adicionar Produto ao Carrinho
+CT01 Validar adição de produto ao carrinho a partir da HOME
+  Dado acessar a página inicial
+  E visualizar um produto disponível
+  Quando clicar no botão "Adicionar ao carrinho"
+  Então o produto deve ser adicionado ao carrinho
+  E uma mensagem de sucesso deve ser exibida
+
+CT02 Validar adição de produto ao carrinho a partir da PDP
+  Dado acessar a página inicial
+  E clicar em um produto disponível para acessar a PDP
+  Quando clicar no botão "Adicionar ao carrinho"
+  Então o produto deve ser adicionado ao carrinho
+  E uma mensagem de sucesso deve ser exibida
+
+
+CT03 Validar visualização de produto adicionado ao carrinho
+  Dado acessar a página inicial
+  E adicionar um produto ao carrinho
+  Quando acessar a página do carrinho
+  Então as informações do produto adicionado devem ser visualizadas com sucesso no carrinho 
+
+
+Funcionalidade: Checkout
+
+CT01 Realizar o checkout com sucesso
+ Dado adicionar um produto no carrinho
+ E acessar a página do carrinho
+ E clicar no botão "Ir para o Checkout"
+ Quando preencher todos os campos obrigatórios
+ E selecionar um método de pagamento válido
+ E confirmar a compra
+ Então a compra deve ser finalizada com sucesso
+ E uma mensagem de sucesso deve ser exibida
+
+CT02 Validar preenchimento de campos obrigatórios no checkout
+ Dado adicionar um produto no carrinho
+ E acessar a página do carrinho
+ E clicar no botão "Ir para o Checkout"
+ Quando não preencher todos os campos obrigatórios
+ E tentar confirmar a compra
+ Então mensagens de erro adequadas devem ser exibidas em cada um dos campos obrigatórios
+
+CT03 Validar preenchimento de CEP inválido no checkout
+ Dado adicionar um produto no carrinho
+ E acessar a página do carrinho
+ E clicar no botão "Ir para o Checkout"
+ Quando preencher o campo de CEP com um valor com menos de 8 caracteres
+ E tentar confirmar a compra
+ Então a mensagem de erro "O CEP deve ter 8 caracteres." deve ser exibida
+
+CT03 Validar preenchimento de EMAIL inválido no checkout
+ Dado adicionar um produto no carrinho
+ E acessar a página do carrinho
+ E clicar no botão "Ir para o Checkout"
+ Quando preencher o campo de Email com um valor inválido
+ E tentar confirmar a compra
+ Então a mensagem de erro "Por favor, insira um email válido." deve ser exibida

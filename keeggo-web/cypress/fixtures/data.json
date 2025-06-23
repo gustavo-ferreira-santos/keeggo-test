@@ -1,0 +1,26 @@
+{
+  "checkout":{
+    "dados_checkout_sucesso": {
+      "nome": "Test",
+      "sobrenome": "User",
+      "endereço": "Rua Test",
+      "numero": "270",
+      "cep": "02012080",
+      "telefone": "11911111111",
+      "email": "testuser@gmail.com",
+      "senha": "512404Test!",
+      "confirmar_senha": "512404Test!"
+    },
+    "dados_checkout_invalidos": {
+      "nome": "Test",
+      "sobrenome": "User",
+      "endereço": "Rua Test",
+      "numero": "270",
+      "cep": "0201",
+      "telefone": "11911111111",
+      "email": "test",
+      "senha": "512404Test!",
+      "confirmar_senha": "512404Test!"
+    }
+  }
+}
